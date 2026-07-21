@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #6C5CE7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.card {
+  background-color: #F8F9FA;
+  border: 3px solid #000;
+  border-radius: 20px;
+  padding: 25px 20px;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: 6px 6px 0px #000;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #FFEAA7;
+  border: 2px solid #000;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 1.3rem;
+  color: #2D3436;
+  margin-bottom: 8px;
+}
+
+p.subtitle {
+  font-size: 0.85rem;
+  color: #636E72;
+  margin-bottom: 20px;
+}
+
+/* Botones */
+.btn-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  position: relative;
+  min-height: 50px;
+}
+
+button {
+  background-color: #6C5CE7;
+  color: #FFF;
+  border: 2px solid #000;
+  padding: 10px 24px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 3px 3px 0px #000;
+  transition: transform 0.1s;
+}
+
+button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #000;
+}
+
+button.btn-secondary {
+  background-color: #DFE6E9;
+  color: #2D3436;
+}
+
+button.btn-full {
+  width: 100%;
+  margin-top: 15px;
+}
+
+/* Campos de entrada (Paso 2) */
+.input-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #2D3436;
+}
+
+input[type="date"],
+input[type="time"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  outline: none;
+  background-color: #FFF;
+}
+
+/* Grid de Comida (Paso 3) */
+.grid-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.option-card {
+  border: 2px solid #000;
+  background-color: #FFF;
+  border-radius: 12px;
+  padding: 10px 5px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px #000;
+  user-select: none;
+}
+
+.option-card.selected {
+  background-color: #A29BFE;
+  color: #FFF;
+}
+
+/* Animación del auto (Confirmación) */
+.car-scene {
+  background-color: #55E6C1;
+  border: 2px solid #000;
+  border-radius: 12px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.sun {
+  width: 20px;
+  height: 20px;
+  background-color: #F8EFBA;
+  border: 2px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.road {
+  background-color: #57606F;
+  height: 25px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-top: 2px solid #000;
+}
+
+.car {
+  font-size: 2rem;
+  position: absolute;
+  bottom: 5px;
+  left: -50px;
+  animation: drive 4s linear infinite;
+}
+
+@keyframes drive {
+  0% { left: -50px; }
+  100% { left: 100%; }
+}
+
+/* Chips de resumen */
+.chips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.chip {
+  background-color: #E0E0E0;
+  border: 1.5px solid #000;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+
